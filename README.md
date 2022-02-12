@@ -1,1 +1,2 @@
-# fluent-v9-example-wc
+# FAST Browser Components (internal)
+A suite of components to support internal Microsoft Edge scenarios.

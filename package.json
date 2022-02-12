@@ -1,0 +1,56 @@
+{
+  "name": "fluent-wc-v9",
+  "description": "A library of Web Components built to mirror the Fluent UI v9 React APIs",
+  "sideEffects": false,
+  "version": "0.1.0",
+  "author": {
+    "name": "Chris Holt"
+  },
+  "license": "MIT",
+  "private": true,
+  "main": "dist/esm/index.js",
+  "types": "dist/fluent-wc-v9.d.ts",
+  "scripts": {
+    "clean:dist": "node ./build/clean.js dist",
+    "build": "tsc -p ./tsconfig.json && rollup -c",
+    "dev": "tsc -p ./tsconfig.json -w",
+    "tdd": "npm run dev & npm run test-chrome:watch",
+    "prepare": "yarn clean:dist && yarn build",
+    "prettier": "prettier --config .prettierrc --write \"**/*.{ts,html}\"",
+    "prettier:diff": "prettier --config .prettierrc \"**/*.{ts,html}\" --list-different",
+    "eslint": "eslint . --ext .ts",
+    "eslint:fix": "eslint . --ext .ts --fix",
+    "start": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "devDependencies": {
+    "@microsoft/eslint-config-fast-dna": "^2.0.0",
+    "@storybook/addons": "^6.1.21",
+    "@storybook/cli": "^6.1.21",
+    "@storybook/html": "^6.1.21",
+    "@storybook/theming": "^6.1.21",
+    "@types/webpack-env": "^1.15.2",
+    "circular-dependency-plugin": "^5.2.0",
+    "esm": "^3.2.25",
+    "ignore-loader": "^0.1.2",
+    "prettier": "2.0.2",
+    "rollup": "^2.7.6",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-filesize": "^8.0.2",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-terser": "^5.3.0",
+    "rollup-plugin-typescript2": "^0.27.0",
+    "source-map": "^0.7.3",
+    "source-map-loader": "^0.2.4",
+    "ts-loader": "^7.0.2",
+    "ts-node": "^8.9.1",
+    "tsconfig-paths": "^3.9.0",
+    "typescript": "^3.9.0",
+    "webpack": "^4.43.0"
+  },
+  "dependencies": {
+    "@microsoft/fast-element": "^1.5.0",
+    "@microsoft/fast-foundation": "^2.32.0",
+    "tslib": "^1.13.0"
+  }
+}
