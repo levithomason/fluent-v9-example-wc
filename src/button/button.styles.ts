@@ -16,6 +16,11 @@ export const buttonStyles = (context: any, definition: any) => css`
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
+        background-color: ${tokens.colorNeutralBackground1};
+        color: ${tokens.colorNeutralForeground1};
+        border: ${tokens.strokeWidthThin} solid ${tokens.colorNeutralStroke1};
+        font-family: ${tokens.fontFamilyBase};
+        outline-style: none;
     }
 `;
 
