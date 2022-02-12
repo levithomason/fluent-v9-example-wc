@@ -1,0 +1,18 @@
+# Source files
+src/
+
+# images
+images/
+
+# config files
+.eslintignore
+.eslintrc.js
+.mocharc.json
+.prettierignore
+karma.conf.js
+rollup.config.js
+tsconfig.json
+
+# cache
+.rollupcache
+temp
