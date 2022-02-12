@@ -1,7 +1,5 @@
 import { html, ref, slotted } from "@microsoft/fast-element";
-import type { ViewTemplate } from "@microsoft/fast-element";
 import { endSlotTemplate, startSlotTemplate } from "@microsoft/fast-foundation";
-import type { FoundationElementDefinition, FoundationElementTemplate } from "@microsoft/fast-foundation";
 import type { Button } from "./button";
 
 /**
@@ -10,8 +8,8 @@ import type { Button } from "./button";
  */
 export const buttonTemplate = (context: any, definition: any) => html<Button>`
     <button
-        class="control"
-        part="control"
+        class="base"
+        part="base"
         ?autofocus="${x => x.autofocus}"
         ?disabled="${x => x.disabled}"
         form="${x => x.formId}"
