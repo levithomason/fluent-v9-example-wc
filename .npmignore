@@ -1,9 +1,3 @@
-# Tests
-dist/dts/__test__/
-dist/esm/__test__/
-*.spec.*
-coverage/
-
 # Source files
 src/
 

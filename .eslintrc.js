@@ -1,5 +1,5 @@
 module.exports = {
-    extends: ["@microsoft/eslint-config-fast-dna", "prettier"],
+    extends: ["@microsoft/eslint-config-fast-dna"],
     rules: {
         "no-extra-boolean-cast": "off",
         "@typescript-eslint/no-use-before-define": "off",

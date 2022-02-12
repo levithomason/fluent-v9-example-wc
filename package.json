@@ -33,7 +33,6 @@
     "circular-dependency-plugin": "^5.2.0",
     "esm": "^3.2.25",
     "ignore-loader": "^0.1.2",
-    "prettier": "2.0.2",
     "rollup": "^2.7.6",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-filesize": "^8.0.2",
@@ -49,6 +48,7 @@
     "webpack": "^4.43.0"
   },
   "dependencies": {
+    "@fluentui/react-theme": "^9.0.0-rc.1",
     "@microsoft/fast-element": "^1.5.0",
     "@microsoft/fast-foundation": "^2.32.0",
     "tslib": "^1.13.0"
