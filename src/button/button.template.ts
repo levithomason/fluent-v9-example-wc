@@ -47,9 +47,7 @@ export const buttonTemplate = (context: any, definition: any) => html<Button>`
         ${ref("control")}
     >
         ${startSlotTemplate(context, definition)}
-        <span class="content" part="content">
-            <slot ${slotted("defaultSlottedContent")}></slot>
-        </span>
+        <slot ${slotted("defaultSlottedContent")}></slot>
         ${endSlotTemplate(context, definition)}
     </button>
 `;
