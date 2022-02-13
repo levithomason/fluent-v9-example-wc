@@ -2,6 +2,7 @@ import { css } from "@microsoft/fast-element";
 import { display } from "@microsoft/fast-foundation";
 import { tokens } from "@fluentui/react-theme";
 import { appearanceBehavior } from "../utilities/appearance-behavior";
+import { sizeBehavior } from "../utilities/size-behavior";
 
 /**
  * Styles for Button
@@ -114,6 +115,42 @@ export const buttonStyles = (context: any, definition: any) => css`
             background-color: ${tokens.colorTransparentBackgroundPressed};
             border-color: transparent;
             color: ${tokens.colorNeutralForeground2BrandPressed};
+        }
+    `),
+    sizeBehavior("small", css`
+        :host([size="small"]) .base {
+            gap: 4px;
+            padding: 0 8px;
+            height: 24px;
+            min-width: 64px;
+            border-radius: ${tokens.borderRadiusSmall};
+            font-size: ${tokens.fontSizeBase200};
+            font-weight: ${tokens.fontWeightRegular};
+            line-height: ${tokens.lineHeightBase200};
+        }
+    `),
+    sizeBehavior("medium", css`
+        :host([size="medium"]) .base {
+            gap: 6px;
+            padding: 0 12px;
+            height: 32px;
+            min-width: 96px;
+            border-radius: ${tokens.borderRadiusMedium};
+            font-size: ${tokens.fontSizeBase300};
+            font-weight: ${tokens.fontWeightSemibold};
+            line-height: ${tokens.lineHeightBase300};
+        }
+    `),
+    sizeBehavior("large", css`
+        :host([size="large"]) .base {
+            gap: 6px;
+            padding: 0 16px;
+            height: 40px;
+            min-width: 96px;
+            border-radius: ${tokens.borderRadiusLarge};
+            font-size: ${tokens.fontSizeBase300};
+            font-weight: ${tokens.fontWeightSemibold};
+            line-height: ${tokens.lineHeightBase300};
         }
     `)
 );
