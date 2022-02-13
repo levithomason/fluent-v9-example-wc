@@ -46,6 +46,13 @@ export const buttonStyles = (context: any, definition: any) => css`
     :host([shape="square"]) {
         border-radius: ${tokens.borderRadiusNone};
     }
+
+    :host([disabled]) .base {
+        background-color: ${tokens.colorNeutralBackgroundDisabled};
+        border-color: ${tokens.colorNeutralStrokeDisabled};
+        color: ${tokens.colorNeutralForegroundDisabled};
+        cursor: not-allowed;
+    }
 `.withBehaviors(
     appearanceBehavior("primary", css`
         :host([appearance="primary"]) .base {
@@ -64,6 +71,16 @@ export const buttonStyles = (context: any, definition: any) => css`
             background-color: ${tokens.colorBrandBackgroundPressed};
             border-color: transparent;
             color: ${tokens.colorNeutralForegroundOnBrand};
+        }
+
+        :host([appearance="primary"][disabled]) .base,
+        :host([appearance="primary"][disabled]:hover) .base,
+        :host([appearance="primary"][disabled]:active) .base {
+            background-color: ${tokens.colorNeutralBackgroundDisabled};
+            border-color: ${tokens.colorNeutralStrokeDisabled};
+            color: ${tokens.colorNeutralForegroundDisabled};
+            cursor: not-allowed;
+            border-color: transparent;
         }
     `),
     appearanceBehavior("subtle", css`
@@ -84,6 +101,20 @@ export const buttonStyles = (context: any, definition: any) => css`
             border-color: transparent;
             color: ${tokens.colorNeutralForeground2BrandPressed};
         }
+
+        :host([appearance="subtle"][disabled]) .base {
+            background-color: ${tokens.colorNeutralBackgroundDisabled};
+            border-color: ${tokens.colorNeutralStrokeDisabled};
+            color: ${tokens.colorNeutralForegroundDisabled};
+            cursor: not-allowed;
+        }
+
+        :host([appearance="subtle"][disabled]) .base,
+        :host([appearance="subtle"][disabled]:hover) .base,
+        :host([appearance="subtle"][disabled]:active) .base {
+            background-color: transparent;
+            border-color: transparent;
+        }
     `),
     appearanceBehavior("outline", css`
         :host([appearance="outline"]) .base {
@@ -95,6 +126,18 @@ export const buttonStyles = (context: any, definition: any) => css`
         }
 
         :host([appearance="outline"]:active) .base {
+            background-color: ${tokens.colorTransparentBackgroundPressed};
+        }
+
+        :host([appearance="outline"][disabled]) .base {
+            background-color: ${tokens.colorTransparentBackground};
+        }
+
+        :host([appearance="outline"][disabled]:hover) .base {
+            background-color: ${tokens.colorTransparentBackgroundHover};
+        }
+
+        :host([appearance="outline"][disabled]:active) .base {
             background-color: ${tokens.colorTransparentBackgroundPressed};
         }
     `),
@@ -115,6 +158,14 @@ export const buttonStyles = (context: any, definition: any) => css`
             background-color: ${tokens.colorTransparentBackgroundPressed};
             border-color: transparent;
             color: ${tokens.colorNeutralForeground2BrandPressed};
+        }
+
+        :host([appearance="transparent"][disabled]) .base,
+        :host([appearance="transparent"][disabled]:hover) .base,
+        :host([appearance="transparent"][disabled]:active) .base {
+            background-color: transparent;
+            border-color: transparent;
+            color: ${tokens.colorNeutralForegroundDisabled};
         }
     `),
     sizeBehavior("small", css`

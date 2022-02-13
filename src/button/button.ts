@@ -22,6 +22,15 @@ export type ButtonAppearance =
  | "square"
  | "rounded";
 
+ /**
+ * Types of button size.
+ * @public
+ */
+export type ButtonSize =
+  | "small"
+  | "medium"
+  | "large";
+
 /**
  * @internal
  */
@@ -45,6 +54,16 @@ export class Button extends FoundationButton {
      */
      @attr
      public shape: ButtonShape = "rounded";
+
+    /**
+     * The size the button should have.
+     *
+     * @public
+     * @remarks
+     * HTML Attribute: shape
+     */
+    @attr
+    public size: ButtonSize = "medium";
 
     /**
      * The button can fill its space.
