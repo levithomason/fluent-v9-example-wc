@@ -8,6 +8,7 @@ import {
  * @public
  */
 export type ButtonAppearance =
+    | undefined
     | "primary"
     | "subtle"
     | "outline"
@@ -18,18 +19,18 @@ export type ButtonAppearance =
  * @public
  */
  export type ButtonShape =
- | "circular"
- | "square"
- | "rounded";
+    | "circular"
+    | "square"
+    | "rounded";
 
  /**
  * Types of button size.
  * @public
  */
 export type ButtonSize =
-  | "small"
-  | "medium"
-  | "large";
+    | "small"
+    | "medium"
+    | "large";
 
 /**
  * @internal
@@ -43,7 +44,7 @@ export class Button extends FoundationButton {
      * HTML Attribute: appearance
      */
     @attr
-    public appearance: ButtonAppearance = "outline";
+    public appearance: ButtonAppearance;
 
     /**
      * The shape the button should have.
@@ -82,7 +83,7 @@ export class Button extends FoundationButton {
      * @remarks
      * HTML Attribute: block
      */
-    @attr({ attribute: "disabled-focusable", mode: "boolean"})
+    @attr({ attribute: "disabledfocusable", mode: "boolean"})
     public disabledFocusable: boolean = false;
 
     /**

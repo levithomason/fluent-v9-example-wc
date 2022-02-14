@@ -39,15 +39,16 @@ export const buttonStyles = (context: any, definition: any) => css`
         outline-style: none;
     }
 
-    :host([shape="circular"]) .base {
+    :host([size][shape="circular"]) .base {
         border-radius: ${tokens.borderRadiusCircular};
     }
 
-    :host([shape="square"]) {
+    :host([size][shape="square"]) .base {
         border-radius: ${tokens.borderRadiusNone};
     }
 
-    :host([disabled]) .base {
+    :host([disabled]) .base,
+    :host .base[aria-disabled="true"] {
         background-color: ${tokens.colorNeutralBackgroundDisabled};
         border-color: ${tokens.colorNeutralStrokeDisabled};
         color: ${tokens.colorNeutralForegroundDisabled};
@@ -75,7 +76,10 @@ export const buttonStyles = (context: any, definition: any) => css`
 
         :host([appearance="primary"][disabled]) .base,
         :host([appearance="primary"][disabled]:hover) .base,
-        :host([appearance="primary"][disabled]:active) .base {
+        :host([appearance="primary"][disabled]:active) .base,
+        :host([appearance="primary"]) .base[aria-disabled="true"],
+        :host([appearance="primary"]:hover) .base[aria-disabled="true"],
+        :host([appearance="primary"]:active) .base[aria-disabled="true"] {
             background-color: ${tokens.colorNeutralBackgroundDisabled};
             border-color: ${tokens.colorNeutralStrokeDisabled};
             color: ${tokens.colorNeutralForegroundDisabled};
@@ -126,18 +130,6 @@ export const buttonStyles = (context: any, definition: any) => css`
         }
 
         :host([appearance="outline"]:active) .base {
-            background-color: ${tokens.colorTransparentBackgroundPressed};
-        }
-
-        :host([appearance="outline"][disabled]) .base {
-            background-color: ${tokens.colorTransparentBackground};
-        }
-
-        :host([appearance="outline"][disabled]:hover) .base {
-            background-color: ${tokens.colorTransparentBackgroundHover};
-        }
-
-        :host([appearance="outline"][disabled]:active) .base {
             background-color: ${tokens.colorTransparentBackgroundPressed};
         }
     `),
