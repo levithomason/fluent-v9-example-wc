@@ -9,7 +9,10 @@ import { sizeBehavior } from "../utilities/size-behavior";
  * @public
  */
 export const buttonStyles = (context: any, definition: any) => css`
-    ${display("inline-block")} .base {
+    ${display("inline-block")}
+    
+    :host .base {
+        display: inline-flex;
         align-items: center;
         justify-content: center;
         vertical-align: middle;
@@ -53,6 +56,13 @@ export const buttonStyles = (context: any, definition: any) => css`
         border-color: ${tokens.colorNeutralStrokeDisabled};
         color: ${tokens.colorNeutralForegroundDisabled};
         cursor: not-allowed;
+    }
+    
+    :host .start,
+    :host .end {
+        display: inline-flex;
+        align-content: center;
+        justify-content: center;
     }
 `.withBehaviors(
     appearanceBehavior("primary", css`
@@ -171,6 +181,18 @@ export const buttonStyles = (context: any, definition: any) => css`
             font-weight: ${tokens.fontWeightRegular};
             line-height: ${tokens.lineHeightBase200};
         }
+
+        :host([size="small"]) ::slotted(svg) {
+            font-size: 20px;
+            height: 20px;
+            width: 20px;
+        }
+
+        :host([size="small"]) .base.icon-only {
+            padding: 4px;
+            min-width: 28px;
+            max-width: 28px;
+        }
     `),
     sizeBehavior("medium", css`
         :host([size="medium"]) .base {
@@ -183,6 +205,18 @@ export const buttonStyles = (context: any, definition: any) => css`
             font-weight: ${tokens.fontWeightSemibold};
             line-height: ${tokens.lineHeightBase300};
         }
+
+        :host([size="medium"]) ::slotted(svg) {
+            font-size: 20px;
+            height: 20px;
+            width: 20px;
+        }
+
+        :host([size="medium"]) .base.icon-only {
+            padding: 0;
+            min-width: 32px;
+            max-width: 32px;
+        }
     `),
     sizeBehavior("large", css`
         :host([size="large"]) .base {
@@ -194,6 +228,18 @@ export const buttonStyles = (context: any, definition: any) => css`
             font-size: ${tokens.fontSizeBase300};
             font-weight: ${tokens.fontWeightSemibold};
             line-height: ${tokens.lineHeightBase300};
+        }
+
+        :host([size="large"]) ::slotted(svg) {
+            font-size: 24px;
+            height: 24px;
+            width: 24px;
+        }
+
+        :host([size="large"]) .base.icon-only {
+            padding: 0;
+            min-width: 40px;
+            max-width: 40px;
         }
     `)
 );
