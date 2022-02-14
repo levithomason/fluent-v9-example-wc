@@ -1,7 +1,5 @@
 import { html, ref, slotted } from "@microsoft/fast-element";
-import type { ViewTemplate } from "@microsoft/fast-element";
 import { endSlotTemplate, startSlotTemplate } from "@microsoft/fast-foundation";
-import type { FoundationElementDefinition, FoundationElementTemplate } from "@microsoft/fast-foundation";
 import type { Button } from "./button";
 
 /**
@@ -10,10 +8,11 @@ import type { Button } from "./button";
  */
 export const buttonTemplate = (context: any, definition: any) => html<Button>`
     <button
-        class="control"
-        part="control"
+        class="base"
+        part="base"
         ?autofocus="${x => x.autofocus}"
         ?disabled="${x => x.disabled}"
+        tabindex="${x => x.disabledFocusable ? "0" : !!x.tabIndex || void 0}"
         form="${x => x.formId}"
         formaction="${x => x.formaction}"
         formenctype="${x => x.formenctype}"
@@ -29,7 +28,7 @@ export const buttonTemplate = (context: any, definition: any) => html<Button>`
         aria-current="${x => x.ariaCurrent}"
         aria-describedby="${x => x.ariaDescribedby}"
         aria-details="${x => x.ariaDetails}"
-        aria-disabled="${x => x.ariaDisabled}"
+        aria-disabled="${x => x.ariaDisabled || !!x.disabledFocusable}"
         aria-errormessage="${x => x.ariaErrormessage}"
         aria-expanded="${x => x.ariaExpanded}"
         aria-flowto="${x => x.ariaFlowto}"
@@ -47,9 +46,7 @@ export const buttonTemplate = (context: any, definition: any) => html<Button>`
         ${ref("control")}
     >
         ${startSlotTemplate(context, definition)}
-        <span class="content" part="content">
-            <slot ${slotted("defaultSlottedContent")}></slot>
-        </span>
+        <slot ${slotted("defaultSlottedContent")}></slot>
         ${endSlotTemplate(context, definition)}
     </button>
 `;
