@@ -12,6 +12,7 @@
   "types": "dist/fluent-wc-v9.d.ts",
   "scripts": {
     "clean:dist": "node ./build/clean.js dist",
+    "app": "webpack serve --config=./webpack.config.js --progress",
     "build": "tsc -p ./tsconfig.json && rollup -c",
     "dev": "tsc -p ./tsconfig.json -w",
     "tdd": "npm run dev & npm run test-chrome:watch",
@@ -24,15 +25,21 @@
     "build-storybook": "build-storybook"
   },
   "devDependencies": {
+    "@fluentui/react-components": "9.0.0-rc.1",
     "@microsoft/eslint-config-fast-dna": "^2.0.0",
+    "@microsoft/fast-react-wrapper": "^0.1.29",
     "@storybook/addons": "^6.1.21",
     "@storybook/cli": "^6.1.21",
     "@storybook/html": "^6.1.21",
     "@storybook/theming": "^6.1.21",
     "@types/webpack-env": "^1.15.2",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
     "circular-dependency-plugin": "^5.2.0",
     "esm": "^3.2.25",
     "ignore-loader": "^0.1.2",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0",
     "rollup": "^2.7.6",
     "rollup-plugin-commonjs": "^10.1.0",
     "rollup-plugin-filesize": "^8.0.2",
@@ -45,7 +52,9 @@
     "ts-node": "^8.9.1",
     "tsconfig-paths": "^3.9.0",
     "typescript": "^3.9.0",
-    "webpack": "^4.43.0"
+    "webpack": "^4.43.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.7.4"
   },
   "dependencies": {
     "@fluentui/react-theme": "^9.0.0-rc.1",
