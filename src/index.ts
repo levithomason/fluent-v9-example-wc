@@ -3,3 +3,4 @@
  */
 export * from "./button/index";
 export * from "./fluent-design-system";
+export * from "./link/index";
