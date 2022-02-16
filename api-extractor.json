@@ -1,0 +1,17 @@
+{
+    "$schema": "https://developer.microsoft.com/json-schemas/api-extractor/v7/api-extractor.schema.json",
+    "mainEntryPointFilePath": "dist/dts/index.d.ts",
+    "apiReport": {
+        "enabled": false
+    },
+    "compiler": {
+        "tsconfigFilePath": "./tsconfig.api-extractor.json"
+    },
+    "docModel": {
+        "enabled": true,
+        "apiJsonFilePath": "dist/fluent-wc-v9.api.json"
+    },
+    "dtsRollup": {
+        "enabled": true
+    }
+}

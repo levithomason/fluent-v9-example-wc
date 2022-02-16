@@ -39,3 +39,5 @@ storybook-static
 
 # Ignore rollup cache
 .rollupcache
+
+temp
