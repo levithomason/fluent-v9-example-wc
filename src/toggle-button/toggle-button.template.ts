@@ -1,12 +1,12 @@
 import { html, ref, slotted } from "@microsoft/fast-element";
 import { endSlotTemplate, startSlotTemplate } from "@microsoft/fast-foundation";
-import type { Button } from "./button";
+import type { ToggleButton } from "./toggle-button";
 
 /**
  * The template for the {@link @microsoft/fast-foundation#(Button:class)} component.
  * @public
  */
-export const buttonTemplate = (context: any, definition: any) => html<Button>`
+export const buttonTemplate = (context: any, definition: any) => html<ToggleButton>`
     <button
         class="base"
         part="base"
@@ -40,9 +40,11 @@ export const buttonTemplate = (context: any, definition: any) => html<Button>`
         aria-labelledby="${x => x.ariaLabelledby}"
         aria-live="${x => x.ariaLive}"
         aria-owns="${x => x.ariaOwns}"
-        aria-pressed="${x => x.ariaPressed}"
+        aria-pressed="${x => x.checked || x.ariaPressed}"
         aria-relevant="${x => x.ariaRelevant}"
         aria-roledescription="${x => x.ariaRoledescription}"
+        @keypress="${(x, c) => x.keypressHandler(c.event as KeyboardEvent)}"
+        @click="${(x, c) => x.clickHandler(c.event as MouseEvent)}"
         ${ref("control")}
     >
         ${startSlotTemplate(context, definition)}
