@@ -31,7 +31,7 @@ typings/
 dist/
 
 # Ignore build www directories
-www/
+www/*.js
 storybook-static
 
 # Ignore Mac .DS_Store
