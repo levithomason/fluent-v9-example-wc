@@ -88,8 +88,11 @@ export const linkStyles = (context: any, definition: any) => css`
         :host([appearance="subtle"][disabledfocusable]) .base {
             border-bottom-color: transparent;
             color: ${tokens.colorNeutralForegroundDisabled};
-            cursor: not-allowed;
-            pointer-events: none;
+        }
+
+        :host([appearance="subtle"][inline][disabled]) .base,
+        :host([appearance="subtle"][inline][disabledfocusable]) .base {
+            border-bottom-color: ${tokens.colorNeutralForegroundDisabled};
         }
     `)
 );
