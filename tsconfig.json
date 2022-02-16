@@ -1,23 +1,20 @@
 {
     "compilerOptions": {
-        "declaration": true,
-        "esModuleInterop": true,
-        "noImplicitAny": true,
-        "strictPropertyInitialization": false,
-        "moduleResolution": "node",
-        "outDir": "dist/esm",
-        "strictNullChecks": true,
-        "experimentalDecorators": true,
-        "target": "es2015",
-        "module": "ESNext",
-        "importHelpers": true,
-        "lib": [
-            "DOM",
-            "ES2015",
-            "ES2016.Array.Include",
-            "ES2017.String",
-            "ES2017.Object"
-        ]
+      "declaration": true,
+      "esModuleInterop": true,
+      "experimentalDecorators": true,
+      "resolveJsonModule": true,
+      "moduleResolution": "node",
+      "declarationDir": "dist/dts",
+      "outDir": "dist/esm",
+      "strictNullChecks": true,
+      "target": "es2015",
+      "module": "ESNext",
+      "allowJs": true,
+      "importHelpers": true,
+      "types": ["node"],
+      "lib": ["DOM", "ES2015", "ES2016.Array.Include"]
     },
     "include": ["src"]
-}
+  }
+  
