@@ -3,7 +3,7 @@
         "declaration": true,
         "esModuleInterop": true,
         "noImplicitAny": true,
-        "strictPropertyInitialization": true,
+        "strictPropertyInitialization": false,
         "moduleResolution": "node",
         "outDir": "dist/esm",
         "strictNullChecks": true,
