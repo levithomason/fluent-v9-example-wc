@@ -1,10 +1,12 @@
 import { Container } from "@microsoft/fast-foundation";
 import { fluentButton } from "./button/index";
 import { fluentLink } from "./link/index";
+import { fluentToggleButton } from "./toggle-button/index";
 
 export {
     fluentButton,
-    fluentLink
+    fluentLink,
+    fluentToggleButton
 };
 
 /**
@@ -17,6 +19,7 @@ export {
  export const allComponents = {
     fluentButton,
     fluentLink,
+    fluentToggleButton,
     register(container?: Container, ...rest: any[]) {
         if (!container) {
             // preserve backward compatibility with code that loops through
