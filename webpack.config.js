@@ -38,6 +38,9 @@ module.exports = () => {
         },
         resolve: {
             extensions: [".js", ".jsx", ".ts", ".tsx"],
-        }
+        },
+        optimization: {
+            minimize: true
+        },
     };
 };
