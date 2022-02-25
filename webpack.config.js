@@ -13,8 +13,9 @@ module.exports = () => {
                 directory: path.join(__dirname, 'www'),
             },
         },
-        mode: "development",
-        devtool: "inline-source-map",
+        target: "node",
+        mode: "production",
+        devtool: "source-map",
         entry: appDir + "/index.tsx",
         module: {
             rules: [
@@ -37,6 +38,6 @@ module.exports = () => {
         },
         resolve: {
             extensions: [".js", ".jsx", ".ts", ".tsx"],
-        },
+        }
     };
 };

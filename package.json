@@ -11,8 +11,10 @@
   "main": "dist/esm/index.js",
   "types": "dist/fluent-wc-v9.d.ts",
   "scripts": {
+    "analyze": "source-map-explorer 'www/main.js.map'",
     "clean:dist": "node ./build/clean.js dist",
     "app": "webpack serve --config=./webpack.config.js --progress",
+    "build:dev": "webpack --config=./webpack.config.js",
     "build": "tsc -p ./tsconfig.json && rollup -c && yarn doc",
     "dev": "tsc -p ./tsconfig.json -w",
     "doc": "api-extractor run --local",
@@ -23,7 +25,8 @@
     "eslint": "eslint . --ext .ts",
     "eslint:fix": "eslint . --ext .ts --fix",
     "start": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "deploy": "surge --domain fluentui-react-wc-bench1.surge.sh"
   },
   "devDependencies": {
     "@fluentui/react-components": "9.0.0-rc.1",
@@ -34,9 +37,9 @@
     "@storybook/cli": "^6.1.21",
     "@storybook/html": "^6.1.21",
     "@storybook/theming": "^6.1.21",
-    "@types/webpack-env": "^1.15.2",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
+    "@types/webpack-env": "^1.15.2",
     "circular-dependency-plugin": "^5.2.0",
     "esm": "^3.2.25",
     "ignore-loader": "^0.1.2",
@@ -50,7 +53,9 @@
     "rollup-plugin-transform-tagged-template": "^0.0.3",
     "rollup-plugin-typescript2": "^0.27.0",
     "source-map": "^0.7.3",
+    "source-map-explorer": "^2.5.2",
     "source-map-loader": "^0.2.4",
+    "terser-webpack-plugin": "^4.2.3",
     "ts-loader": "^7.0.2",
     "ts-node": "^8.9.1",
     "tsconfig-paths": "^3.9.0",
