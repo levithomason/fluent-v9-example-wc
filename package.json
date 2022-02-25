@@ -11,10 +11,11 @@
   "main": "dist/esm/index.js",
   "types": "dist/fluent-wc-v9.d.ts",
   "scripts": {
-    "analyze": "source-map-explorer 'www/main.js.map'",
+    "analyze": "source-map-explorer 'www/*.js.map'",
     "clean:dist": "node ./build/clean.js dist",
     "app": "webpack serve --config=./webpack.config.js --progress",
-    "build:dev": "webpack --config=./webpack.config.js",
+    "build:prod": "webpack --config=./webpack.config.js --mode=production",
+    "build:dev": "webpack --config=./webpack.config.js --mode=development --devtool source-map",
     "build": "tsc -p ./tsconfig.json && rollup -c && yarn doc",
     "dev": "tsc -p ./tsconfig.json -w",
     "doc": "api-extractor run --local",
@@ -61,6 +62,7 @@
     "tsconfig-paths": "^3.9.0",
     "typescript": "^3.9.0",
     "webpack": "^4.43.0",
+    "webpack-bundle-analyzer": "^4.5.0",
     "webpack-cli": "^4.9.2",
     "webpack-dev-server": "^4.7.4"
   },

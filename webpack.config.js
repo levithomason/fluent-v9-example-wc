@@ -2,6 +2,7 @@ const path = require("path");
 
 const appDir = path.resolve("./app");
 const outDir = path.resolve("./www");
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = () => {
     return {
@@ -13,9 +14,7 @@ module.exports = () => {
                 directory: path.join(__dirname, 'www'),
             },
         },
-        target: "node",
         mode: "production",
-        devtool: "source-map",
         entry: appDir + "/index.tsx",
         module: {
             rules: [
@@ -39,8 +38,8 @@ module.exports = () => {
         resolve: {
             extensions: [".js", ".jsx", ".ts", ".tsx"],
         },
-        optimization: {
-            minimize: true
-        },
+        plugins: [
+            new BundleAnalyzerPlugin()
+        ]
     };
 };
