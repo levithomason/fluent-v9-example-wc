@@ -1,0 +1,19 @@
+declare namespace JSX {
+  /**
+   * In order for custom elements to be written as HTML elements (not React components) in TypeScript,
+   * the element name along with the attributes, properties, and events it supports will need to be
+   * captured in the IntrinsicElements interface.
+   * 
+   * Note that this example does not leverage the tags themselves, instead using the constructor as JSX. See
+   * "src/type-augmentation/*.ts" for details on that implementation
+   */
+  interface IntrinsicElements {
+      "fluent-button": React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> & {
+        appearance?: string
+      };
+  }
+}
+
+/**
+* Satisfy TypeScript  importing modules without typings
+*/

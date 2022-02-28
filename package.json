@@ -27,7 +27,7 @@
     "eslint:fix": "eslint . --ext .ts --fix",
     "start": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "deploy": "surge --domain fluentui-react-wc-bench1.surge.sh"
+    "deploy": "surge --domain fluentui-react-wc-bench3.surge.sh"
   },
   "devDependencies": {
     "@fluentui/react-components": "9.0.0-rc.1",
