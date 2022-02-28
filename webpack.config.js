@@ -2,7 +2,7 @@ const path = require("path");
 
 const appDir = path.resolve("./app");
 const outDir = path.resolve("./www");
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = () => {
     return {
@@ -37,9 +37,6 @@ module.exports = () => {
         },
         resolve: {
             extensions: [".js", ".jsx", ".ts", ".tsx"],
-        },
-        plugins: [
-            new BundleAnalyzerPlugin()
-        ]
+        }
     };
 };
