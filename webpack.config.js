@@ -40,6 +40,9 @@ module.exports = () => {
         },
         plugins: [
             new BundleAnalyzerPlugin()
-        ]
+        ],
+        performance: {
+            hints: false
+        }
     };
 };
