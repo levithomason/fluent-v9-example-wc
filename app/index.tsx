@@ -11,7 +11,7 @@ provideFluentDesignSystem().register(fluentButton())
 
 class FluentButtonTest extends React.Component {
     render() {
-      return <fluent-button>unwrapped button</fluent-button>;
+      return <fluent-button appearance="primary">unwrapped button</fluent-button>;
     }
   }
 
@@ -20,7 +20,7 @@ class FluentButtonTest extends React.Component {
 ReactDOM.render(
     <FluentProvider style={{ display: "grid", gap: "12px"}} theme={webLightTheme}>
         <div style={layoutStyles}>
-            <FluentButtonTest appearance="primary">Test</FluentButtonTest>
+            <FluentButtonTest>Test</FluentButtonTest>
         </div>
     </FluentProvider>,
     document.getElementById('root'),
