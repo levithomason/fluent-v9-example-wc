@@ -9,18 +9,11 @@ const layoutStyles = { display: "grid", gap: "12px", padding: "12px" }
 
 provideFluentDesignSystem().register(fluentButton())
 
-class FluentButtonTest extends React.Component {
-    render() {
-      return <fluent-button appearance="primary">unwrapped button</fluent-button>;
-    }
-  }
-
-
 
 ReactDOM.render(
     <FluentProvider style={{ display: "grid", gap: "12px"}} theme={webLightTheme}>
         <div style={layoutStyles}>
-            <FluentButtonTest>Test</FluentButtonTest>
+            <fluent-button appearance="primary">unwrapped button</fluent-button>
         </div>
     </FluentProvider>,
     document.getElementById('root'),

@@ -21,6 +21,7 @@
       "jsx": "react"
     },
     "include": [
-      "app/"
+      "app/",
+      "app/types.d.ts"
     ]
   }
