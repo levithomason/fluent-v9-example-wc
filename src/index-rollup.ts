@@ -1,6 +1,3 @@
-import { allComponents } from "./custom-elements";
-import { provideFluentDesignSystem } from "./fluent-design-system";
-
 export * from "./index";
 
 /**
@@ -9,4 +6,3 @@ export * from "./index";
  * Only available if the components are added through a script tag
  * rather than a module/build system.
  */
-export const FluentDesignSystem = provideFluentDesignSystem().register(allComponents);

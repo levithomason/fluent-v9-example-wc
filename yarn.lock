@@ -1840,6 +1840,11 @@
   resolved "https://registry.yarnpkg.com/@sindresorhus/is/-/is-0.14.0.tgz#9fb3a3cf3132328151f353de4632e01e52102bea"
   integrity sha512-9NET910DNaIPngYnLLPeg+Ogzqsi9uM4mSboU5y6p8S5DzMTVEsJZrawi+BoDNUVBa2DhJqQYUFvMDfgU062LQ==
 
+"@skatejs/val@^0.5.0":
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/@skatejs/val/-/val-0.5.0.tgz#f9ebaf363fa45edc51a8181fc855b52b024274f8"
+  integrity sha512-QItfWj+EHl/2TWsXoN/Howp3itKeyfU/A4JAgwPPkLAnvetIO7/O/JwBaGFTghwQWEjWxC3ESapPavNxM8LhGA==
+
 "@storybook/addons@6.4.19", "@storybook/addons@^6.1.21":
   version "6.4.19"
   resolved "https://registry.yarnpkg.com/@storybook/addons/-/addons-6.4.19.tgz#797d912b8b5a86cd6e0d31fa4c42d1f80808a432"

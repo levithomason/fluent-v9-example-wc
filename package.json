@@ -27,7 +27,7 @@
     "eslint:fix": "eslint . --ext .ts --fix",
     "start": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "deploy": "surge --domain fluentui-react-wc-bench3.surge.sh"
+    "deploy": "surge --domain fluentui-react-wc-bench5.surge.sh"
   },
   "devDependencies": {
     "@fluentui/react-components": "9.0.0-rc.1",
@@ -70,6 +70,7 @@
     "@fluentui/react-theme": "^9.0.0-rc.1",
     "@microsoft/fast-element": "^1.7.0",
     "@microsoft/fast-foundation": "^2.33.3",
+    "@skatejs/val": "^0.5.0",
     "tslib": "^1.13.0",
     "yargs": "^17.3.1"
   }
