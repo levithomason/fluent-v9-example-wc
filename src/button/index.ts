@@ -1,3 +1,4 @@
+import React from 'react'
 import { customElement } from "@microsoft/fast-element";
 import { Button } from "./button";
 import { buttonTemplate as template } from "./button.template";
