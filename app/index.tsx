@@ -7,17 +7,16 @@ import {
     webDarkTheme,
     webLightTheme } from '@fluentui/react-components';
 import { provideReactWrapper } from '@microsoft/fast-react-wrapper';
-import { fluentButton, fluentLink, fluentToggleButton, provideFluentDesignSystem } from "../src/index";
+import { FluentButton as Button, FluentLink as Link, FluentToggleButton as ToggleButton } from "../src/index";
 
 const layoutStyles = { display: "grid", gap: "12px", padding: "12px" }
 const { wrap } = provideReactWrapper(
-    React, 
-    provideFluentDesignSystem()
+    React
 );
 
-export const FluentButton = wrap(fluentButton());
-export const FluentToggleButton = wrap(fluentToggleButton());
-export const FluentLink = wrap(fluentLink());
+export const FluentButton = wrap(Button);
+export const FluentToggleButton = wrap(ToggleButton);
+export const FluentLink = wrap(Link);
 
 ReactDOM.render(
     <FluentProvider style={{ display: "grid", gap: "12px"}} theme={webLightTheme}>
