@@ -5,7 +5,7 @@ import { display } from "@microsoft/fast-foundation";
 /**
  * Base button styles
  */
-export const baseButtonStyles = (context: any, definition: any) => css`
+export const baseButtonStyles = css`
     ${display("inline-block")}
 
     :host .base {
@@ -66,7 +66,7 @@ export const baseButtonStyles = (context: any, definition: any) => css`
 /**
  * Primary button styles
  */
-export const primaryButtonStyles = (context: any, definition: any) => css`
+export const primaryButtonStyles = css`
     :host([appearance="primary"]) .base {
         background-color: ${tokens.colorBrandBackground};
         border-color: transparent;
@@ -102,7 +102,7 @@ export const primaryButtonStyles = (context: any, definition: any) => css`
 /**
  * Subtle button styles
  */
-export const subtleButtonStyles = (context: any, definition: any) => css`
+export const subtleButtonStyles = css`
     :host([appearance="subtle"]) .base {
         background-color: ${tokens.colorSubtleBackground};
         border-color: transparent;
@@ -139,7 +139,7 @@ export const subtleButtonStyles = (context: any, definition: any) => css`
 /**
  * Outline button styles
  */
-export const outlineButtonStyles = (context: any, definition: any) => css`
+export const outlineButtonStyles = css`
     :host([appearance="outline"]) .base {
         background-color: ${tokens.colorTransparentBackground};
     }
@@ -156,7 +156,7 @@ export const outlineButtonStyles = (context: any, definition: any) => css`
 /**
  * Transparent button styles
  */
- export const transparentButtonStyles = (context: any, definition: any) => css`
+ export const transparentButtonStyles = css`
     :host([appearance="transparent"]) .base {
         background-color: ${tokens.colorTransparentBackground};
         border-color: transparent;
@@ -187,7 +187,7 @@ export const outlineButtonStyles = (context: any, definition: any) => css`
 /**
  * Small button styles
  */
-export const smallButtonStyles = (context: any, definition: any) => css`
+export const smallButtonStyles = css`
     :host([size="small"]) .base {
         gap: 4px;
         padding: 0 8px;
@@ -215,7 +215,7 @@ export const smallButtonStyles = (context: any, definition: any) => css`
 /**
  * Medium button styles
  */
-export const mediumButtonStyles = (context: any, definition: any) => css`
+export const mediumButtonStyles = css`
     :host([size="medium"]) .base {
         gap: 6px;
         padding: 0 12px;
@@ -240,7 +240,7 @@ export const mediumButtonStyles = (context: any, definition: any) => css`
     }
 `;
 
-export const largeButtonStyles = (context: any, definition: any) => css`
+export const largeButtonStyles = css`
     :host([size="large"]) .base {
         gap: 6px;
         padding: 0 16px;
