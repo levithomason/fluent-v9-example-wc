@@ -6,7 +6,7 @@ import type { Button } from "./button";
  * The template for the {@link @microsoft/fast-foundation#(Button:class)} component.
  * @public
  */
-export const buttonTemplate = (context: any, definition: any) => html<Button>`
+export const buttonTemplate = html<Button>`
     <button
         class="base"
         part="base"
@@ -45,8 +45,8 @@ export const buttonTemplate = (context: any, definition: any) => html<Button>`
         aria-roledescription="${x => x.ariaRoledescription}"
         ${ref("control")}
     >
-        ${startSlotTemplate(context, definition)}
+        ${startSlotTemplate}
         <slot ${slotted("defaultSlottedContent")}></slot>
-        ${endSlotTemplate(context, definition)}
+        ${endSlotTemplate}
     </button>
 `;

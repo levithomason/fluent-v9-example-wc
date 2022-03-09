@@ -1,4 +1,4 @@
-import { Button as FoundationButton } from "@microsoft/fast-foundation";
+import { customElement } from '@microsoft/fast-element';
 import { Button } from "./button";
 import { buttonTemplate as template } from "./button.template";
 import { buttonStyles as styles } from "./button.styles";
@@ -14,12 +14,12 @@ import { buttonStyles as styles } from "./button.styles";
  *
  * {@link https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot/delegatesFocus | delegatesFocus}
  */
- export const fluentButton = Button.compose({
-    baseName: "button",
-    baseClass: FoundationButton,
+@customElement({
+    name: "fluent-button",
     template,
     styles,
     shadowOptions: {
         delegatesFocus: true,
     },
-});
+})
+ export class FluentButton extends Button {}

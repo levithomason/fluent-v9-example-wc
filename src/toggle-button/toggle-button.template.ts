@@ -6,7 +6,7 @@ import type { ToggleButton } from "./toggle-button";
  * The template for the {@link @microsoft/fast-foundation#(Button:class)} component.
  * @public
  */
-export const buttonTemplate = (context: any, definition: any) => html<ToggleButton>`
+export const buttonTemplate = html<ToggleButton>`
     <button
         class="base"
         part="base"
@@ -47,8 +47,8 @@ export const buttonTemplate = (context: any, definition: any) => html<ToggleButt
         @click="${(x, c) => x.clickHandler(c.event as MouseEvent)}"
         ${ref("control")}
     >
-        ${startSlotTemplate(context, definition)}
+        ${startSlotTemplate}
         <slot ${slotted("defaultSlottedContent")}></slot>
-        ${endSlotTemplate(context, definition)}
+        ${endSlotTemplate}
     </button>
 `;
