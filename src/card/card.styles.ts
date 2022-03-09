@@ -11,8 +11,10 @@ export const cardStyles = css`
     ${display("block")} :host {
         contain: content;
         color: ${tokens.colorNeutralForeground1};
-        border: calc(${tokens.strokeWidthThin} * 1px) solid transparent;
-        border-radius: calc(${tokens.borderRadiusMedium} * 1px);
+        border-width: ${tokens.strokeWidthThin};
+        border-style: solid;
+        border-color: none;
+        border-radius: ${tokens.borderRadiusMedium};
     }
 
     :host([interactive]) {

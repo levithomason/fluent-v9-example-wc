@@ -8,7 +8,6 @@ import {
  * @public
  */
 export type CardAppearance =
-    | undefined
     | "filled"
     | "filled-alternative"
     | "subtle"
@@ -26,7 +25,7 @@ export class Card extends FoundationCard {
      * HTML Attribute: appearance
      */
     @attr
-    public appearance: CardAppearance;
+    public appearance: CardAppearance = "filled";
 
     /**
      * The card is interactive.

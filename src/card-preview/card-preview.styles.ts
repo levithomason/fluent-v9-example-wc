@@ -10,15 +10,15 @@ export const cardPreviewStyles = css`
         position: relative;
     }
 
-    .logo {
+    ::slotted(*) {
+        display: block;
+    }
+    
+    ::slotted([slot="logo"]) {
         position: absolute;
         bottom: 12px;
         left: 12px;
         width: 32px;
         height: 32px;
-    }
-
-    ::slotted(*) {
-        display: block;
     }
 `;
