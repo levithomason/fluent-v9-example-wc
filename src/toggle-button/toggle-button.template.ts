@@ -47,8 +47,8 @@ export const buttonTemplate = html<ToggleButton>`
         @click="${(x, c) => x.clickHandler(c.event as MouseEvent)}"
         ${ref("control")}
     >
-        ${startSlotTemplate}
+        <slot name="start"></slot>
         <slot ${slotted("defaultSlottedContent")}></slot>
-        ${endSlotTemplate}
+        <slot name="end"></slot>
     </button>
 `;

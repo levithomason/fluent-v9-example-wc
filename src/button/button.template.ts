@@ -45,8 +45,8 @@ export const buttonTemplate = html<Button>`
         aria-roledescription="${x => x.ariaRoledescription}"
         ${ref("control")}
     >
-        ${startSlotTemplate}
+        <slot name="start"></slot>
         <slot ${slotted("defaultSlottedContent")}></slot>
-        ${endSlotTemplate}
+        <slot name="end"></slot>
     </button>
 `;
