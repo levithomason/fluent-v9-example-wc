@@ -54,13 +54,6 @@ export const baseButtonStyles = css`
         color: ${tokens.colorNeutralForegroundDisabled};
         cursor: not-allowed;
     }
-
-    :host .start,
-    :host .end {
-        display: inline-flex;
-        align-content: center;
-        justify-content: center;
-    }
 `;
 
 /**
