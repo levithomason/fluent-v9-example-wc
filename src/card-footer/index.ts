@@ -4,14 +4,12 @@ import { cardFooterTemplate as template } from "./card-footer.template";
 import { cardFooterStyles as styles } from "./card-footer.styles";
 
 /**
- * A function that returns a Card registration for configuring the component with a DesignSystem.
+ * THe Card Footer component
  *
  *
  * @public
  * @remarks
  * Generates HTML Element: `<fluent-card-footer>`
- *
- * {@link https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot/delegatesFocus | delegatesFocus}
  */
 @customElement({
     name: "fluent-card-footer",
