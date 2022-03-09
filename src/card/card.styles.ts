@@ -9,7 +9,6 @@ import { appearanceBehavior } from '../utilities/appearance-behavior';
  */
 export const cardStyles = css`
     ${display("block")} :host {
-        display: block;
         contain: content;
         color: ${tokens.colorNeutralForeground1};
         border: calc(${tokens.strokeWidthThin} * 1px) solid transparent;

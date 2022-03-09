@@ -1,6 +1,7 @@
 import { customElement, html } from '@microsoft/fast-element';
-import { Card } from "./card";
-import { cardStyles as styles } from "./card.styles";
+import { CardHeader } from "./card-header";
+import { cardHeaderTemplate as template } from "./card-header.template";
+import { cardHeaderStyles as styles } from "./card-header.styles";
 
 /**
  * A function that returns a Card registration for configuring the component with a DesignSystem.
@@ -13,8 +14,8 @@ import { cardStyles as styles } from "./card.styles";
  * {@link https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot/delegatesFocus | delegatesFocus}
  */
 @customElement({
-    name: "fluent-card",
-    template: html`<template role="group"><slot></slot></template>`,
+    name: "fluent-card-header",
+    template,
     styles
 })
- export class FluentCard extends Card {}
+ export class FluentCardHeader extends CardHeader {}
