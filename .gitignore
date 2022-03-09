@@ -41,3 +41,5 @@ storybook-static
 .rollupcache
 
 temp
+
+yarn.lock
