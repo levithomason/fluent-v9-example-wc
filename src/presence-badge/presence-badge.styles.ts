@@ -55,78 +55,45 @@ export const presenceBadgeStyles = css`
     }
 `.withBehaviors(
     sizeBehavior("tiny", css`
-        :host([size="tiny"]) {
+        :host([size="tiny"]) svg,
+        ::slotted(svg) {
             width: 6px;
             height: 6px;
-            font-size: 4px;
-        }
-
-        ::slotted(svg) {
-            font-size: 6px;
         }
     `),
     sizeBehavior("extra-small", css`
-        :host([size="extra-small"]) {
+        :host([size="extra-small"]) svg,
+        ::slotted(svg) {
             width: 10px;
             height: 10px;
-            font-size: 6px;
-        }
-
-        ::slotted(svg) {
-            font-size: 10px;
         }
     `),
     sizeBehavior("small", css`
-        :host([size="small"]) {
-            min-width: 16px;
-            height: 16px;
-            font-size: 8px;
-            padding: 2px;
-            gap: 4px;   
-        }
-
+        :host([size="small"]) svg,
         ::slotted(svg) {
-            font-size: 12px;
+            width: 12px;
+            height: 12px;
         }
     `),
     sizeBehavior("medium", css`
-        :host([size="medium"]) {
-            min-width: 20px;
-            height: 20px;
-            font-size: 10px;
-            padding: 4px;
-            gap: 4px;
-        }
-
+        :host([size="medium"]) svg,
         ::slotted(svg) {
-            font-size: 12px;
+            width: 16px;
+            height: 16px;
         }
     `),
     sizeBehavior("large", css`
-        :host([size="large"]) {
-            min-width: 24px;
-            height: 24px;
-            font-size: 12px;
-            padding: 4px;
-            gap: 4px;    
-        }
-
+        :host([size="large"]) svg,
         ::slotted(svg) {
-            font-size: 16px;
+            width: 20px !important;
+            height: 20px !important;
         }
     `),
     sizeBehavior("extra-large", css`
-        :host([size="extra-large"]) {
-            min-width: 32px;
-            height: 32px;
-            font-size: 12px;
-            padding: 6px;
-            gap: 6px;
-            border-width: ${tokens.strokeWidthThick};
-        }
-
+        :host([size="extra-large"]) svg,
         ::slotted(svg) {
-            font-size: 20px;
+            width: 28px !important;
+            height: 28px !important;
         }
     `),
 );
