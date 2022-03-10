@@ -8,6 +8,6 @@ export * from "./card-header/index";
 export * from "./card-preview/index";
 export * from "./checkbox/index";
 export * from "./divider/index";
-export * from "./fluent-design-system";
 export * from "./link/index";
+export * from "./presence-badge/index";
 export * from "./toggle-button/index";
