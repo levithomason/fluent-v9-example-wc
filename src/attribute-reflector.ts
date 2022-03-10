@@ -21,7 +21,7 @@ class ReflectAttrBehavior implements Behavior {
 
     private observerConfig: MutationObserverInit;
     constructor(private target: HTMLElement, private attributes: string[]) {
-        this.observerConfig = { attributeFilter: this.attributes }
+        this.observerConfig = { attributes: true, attributeFilter: this.attributes }
     }
 
     public bind(source: HTMLElement): void {
