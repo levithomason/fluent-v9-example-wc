@@ -1,3 +1,4 @@
+import { FluentAvatar } from "./avatar/index";
 import { FluentButton } from "./button/index";
 import { FluentCard } from "./card/index";
 import { FluentCardFooter } from "./card-footer/index";
@@ -10,6 +11,7 @@ import { FluentPresenceBadge } from "./presence-badge/index";
 import { FluentToggleButton } from "./toggle-button/index";
 
 export const AllComponents = {
+    FluentAvatar,
     FluentButton,
     FluentCard,
     FluentCardFooter,

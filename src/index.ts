@@ -1,6 +1,7 @@
 /**
  * Export all custom element definitions
  */
+export * from "./avatar/index";
 export * from "./button/index";
 export * from "./card/index";
 export * from "./card-footer/index";
