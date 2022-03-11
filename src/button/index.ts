@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import { customElement } from "@microsoft/fast-element";
 import { Button } from "./button";
 import { buttonTemplate as template } from "./button.template";
@@ -24,3 +24,10 @@ import { buttonStyles as styles } from "./button.styles";
   },
 })
 export class FluentButton extends Button {}
+export interface FluentButton
+  extends React.Component<
+    {
+      type?: string;
+      appearance?: string;
+    } & React.HTMLAttributes<FluentButton>
+  > {}

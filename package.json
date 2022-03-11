@@ -44,6 +44,7 @@
     "circular-dependency-plugin": "^5.2.0",
     "esm": "^3.2.25",
     "ignore-loader": "^0.1.2",
+    "minify-html-literals": "^1.3.5",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
     "rollup": "^2.7.6",

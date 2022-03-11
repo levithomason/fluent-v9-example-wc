@@ -5,44 +5,50 @@ const outDir = path.resolve("./www");
 // const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 module.exports = () => {
-    return {
-        devServer: {
-            compress: false,
-            open: true,
-            port: 9005,
-            static: {
-                directory: path.join(__dirname, 'www'),
+  return {
+    devServer: {
+      compress: false,
+      open: true,
+      port: 9005,
+      static: {
+        directory: path.join(__dirname, "www"),
+      },
+    },
+    mode: "production",
+    entry: appDir + "/index.tsx",
+    module: {
+      rules: [
+        {
+          test: /\.tsx?/,
+          use: [
+            {
+              loader: path.resolve(__dirname, "./template-loader.js"),
             },
+            {
+              loader: "ts-loader",
+              options: {
+                configFile: "tsconfig.app.json",
+              },
+            },
+          ],
+          exclude: /node_modules/,
         },
-        mode: "production",
-        entry: appDir + "/index.tsx",
-        module: {
-            rules: [
-                {
-                    test: /\.tsx?/,
-                    use: [{
-                        loader: 'ts-loader',
-                        options: {
-                            configFile: "tsconfig.app.json"
-                        }
-                    }],
-                    exclude: /node_modules/,
-                }
-            ]
-        },
-        output: {
-            path: outDir,
-            publicPath: "/",
-            filename: "[name].js",
-        },
-        resolve: {
-            extensions: [".js", ".jsx", ".ts", ".tsx"]
-        },
-        performance: {
-            hints: false
-        }
-        // plugins: [
-        //     new BundleAnalyzerPlugin()
-        // ]
-    };
+      ],
+    },
+    output: {
+      path: outDir,
+      publicPath: "/",
+      filename: "[name].js",
+    },
+    resolve: {
+      extensions: [".js", ".jsx", ".ts", ".tsx"],
+      modules: ["app", "node_modules"],
+    },
+    performance: {
+      hints: false,
+    },
+    // plugins: [
+    //     new BundleAnalyzerPlugin()
+    // ]
+  };
 };
