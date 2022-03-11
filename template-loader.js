@@ -1,5 +1,6 @@
 const minify = require("minify-html-literals");
 module.exports = function (source) {
+  console.log("running minify");
   try {
     const minified = minify.minifyHTMLLiterals(source);
 

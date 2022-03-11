@@ -33,7 +33,6 @@
     "@fluentui/react-components": "9.0.0-rc.1",
     "@microsoft/api-extractor": "7.8.1",
     "@microsoft/eslint-config-fast-dna": "^2.0.0",
-    "@microsoft/fast-react-wrapper": "^0.1.29",
     "@storybook/addons": "^6.1.21",
     "@storybook/cli": "^6.1.21",
     "@storybook/html": "^6.1.21",

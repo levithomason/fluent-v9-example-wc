@@ -5,9 +5,7 @@ import h from "./pragma"; /* Note: Import wrapped createElement. */
 
 import ReactDOM from "react-dom";
 import { FluentProvider, webLightTheme } from "@fluentui/react-components";
-
 import { FluentButton } from "../src/index";
-
 const layoutStyles = { display: "grid", gap: "12px", padding: "12px" };
 
 enum Component {
