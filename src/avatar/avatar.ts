@@ -72,8 +72,6 @@ export class Avatar extends FASTElement {
     private nameChanged(previous: string, next: string): void {
         if (next) {
             this.initials = getInitials(this.name, window.getComputedStyle(this).direction === "rtl")
-
-            console.log(this.name);
         }
     }
 

@@ -1,7 +1,7 @@
 <style>
     .container {
         display: flex;
-        gap: 24px;
+        gap: 8px;
     }
 </style>
 <h1>Avatar</h1>
@@ -16,7 +16,7 @@
 
 <h2>Sizes</h2>
 
-<div class="container">
+<div class="container" style="gap: 24px">
     <fluent-avatar name="Lydia Bauer" size="20"></fluent-avatar>
     <fluent-avatar name="Amanda Brady" size="24"></fluent-avatar>
     <fluent-avatar name="Henry Brill" size="28"></fluent-avatar>
@@ -61,6 +61,9 @@
 </div>
 
 <h2>Color</h2>
+
+<h3>Brand</h3>
+<fluent-avatar color="brand" name="brand avatar"></fluent-avatar>
 
 <h3>Colorful</h3>
 <div class="container">
@@ -130,3 +133,15 @@
 <fluent-avatar>
     <span slot="initials">CH</span>
 </fluent-avatar>
+
+<h2>Badge</h2>
+
+<div class="container">
+    <fluent-avatar>CH<fluent-presence-badge size="extra-small" status="available"></fluent-presence-badge></fluent-avatar>
+    <fluent-avatar>CH<fluent-presence-badge size="extra-small" status="away"></fluent-presence-badge></fluent-avatar>
+    <fluent-avatar>CH<fluent-presence-badge size="extra-small" status="busy"></fluent-presence-badge></fluent-avatar>
+    <fluent-avatar>CH<fluent-presence-badge size="extra-small" status="donotdisturb"></fluent-presence-badge></fluent-avatar>
+    <fluent-avatar>CH<fluent-presence-badge size="extra-small" status="offline"></fluent-presence-badge></fluent-avatar>
+    <fluent-avatar>CH<fluent-presence-badge size="extra-small" status="outofoffice"></fluent-presence-badge></fluent-avatar>
+    <fluent-avatar>CH<fluent-presence-badge size="extra-small" status="unknown"></fluent-presence-badge></fluent-avatar>
+</div>
