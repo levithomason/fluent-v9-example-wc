@@ -1,6 +1,8 @@
 /**
  * Export all custom element definitions
  */
+export * from "./accordion/index";
+export * from "./accordion/accordion-item/index";
 export * from "./avatar/index";
 export * from "./button/index";
 export * from "./card/index";
