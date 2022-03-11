@@ -1,5 +1,4 @@
 import { html, ref, slotted } from "@microsoft/fast-element";
-import { endSlotTemplate, startSlotTemplate } from "@microsoft/fast-foundation";
 import type { ToggleButton } from "./toggle-button";
 
 /**

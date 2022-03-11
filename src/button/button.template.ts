@@ -1,5 +1,4 @@
 import { html, ref, slotted } from "@microsoft/fast-element";
-import { endSlotTemplate, startSlotTemplate } from "@microsoft/fast-foundation";
 import type { Button } from "./button";
 
 /**
@@ -12,7 +11,7 @@ export const buttonTemplate = html<Button>`
         part="base"
         ?autofocus="${x => x.autofocus}"
         ?disabled="${x => x.disabled}"
-        tabindex="${x => x.disabledFocusable ? "0" : !!x.tabIndex || void 0}"
+        tabindex="${x => x.disabledFocusable ? "0" : void 0}"
         form="${x => x.formId}"
         formaction="${x => x.formaction}"
         formenctype="${x => x.formenctype}"
