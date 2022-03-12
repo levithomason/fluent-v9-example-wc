@@ -1,7 +1,7 @@
 import { attr, FASTElement } from "@microsoft/fast-element";
 
 /**
- * Types of card appearance.
+ * Types of image fit
  * @public
  */
 export type ImageFit = "none" | "center" | "contain" | "cover"
