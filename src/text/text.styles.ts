@@ -18,12 +18,14 @@ export const textStyles = css`
         text-overflow: clip;
     }
 
+    :host([truncate]) ::slotted(*),
     :host([nowrap]) ::slotted(*) {
         white-space: nowrap;
         overflow: hidden;
     }
 
     :host([truncate]) ::slotted(*) {
+        display: block;
         text-overflow: ellipsis;
     }
 

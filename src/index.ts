@@ -14,4 +14,5 @@ export * from "./divider/index";
 export * from "./image/index";
 export * from "./link/index";
 export * from "./presence-badge/index";
+export * from "./text/index";
 export * from "./toggle-button/index";
