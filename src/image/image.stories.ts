@@ -2,7 +2,7 @@ import ImageTemplate from "./fixtures/image.html";
 import "./index";
 
 export default {
-    title: "Image",
+    title: "Components/Image",
 };
 
 export const Image = () => ImageTemplate;

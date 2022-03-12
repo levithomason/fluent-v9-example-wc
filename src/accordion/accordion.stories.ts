@@ -2,7 +2,7 @@ import AccordionTemplate from "./fixtures/accordion.html";
 import "./index";
 
 export default {
-    title: "Accordion",
+    title: "Components/Accordion",
 };
 
 export const Accordion = () => AccordionTemplate;
