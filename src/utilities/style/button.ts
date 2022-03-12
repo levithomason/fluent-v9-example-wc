@@ -54,6 +54,12 @@ export const baseButtonStyles = css`
         color: ${tokens.colorNeutralForegroundDisabled};
         cursor: not-allowed;
     }
+
+    ::slotted(svg) {
+        font-size: 20px;
+        height: 20px;
+        width: 20px;
+    }
 `;
 
 /**
@@ -192,12 +198,6 @@ export const smallButtonStyles = css`
         line-height: ${tokens.lineHeightBase200};
     }
 
-    :host([size="small"]) ::slotted(svg) {
-        font-size: 20px;
-        height: 20px;
-        width: 20px;
-    }
-
     :host([size="small"]) .base.icon-only {
         padding: 4px;
         min-width: 28px;
@@ -218,12 +218,6 @@ export const mediumButtonStyles = css`
         font-size: ${tokens.fontSizeBase300};
         font-weight: ${tokens.fontWeightSemibold};
         line-height: ${tokens.lineHeightBase300};
-    }
-
-    :host([size="medium"]) ::slotted(svg) {
-        font-size: 20px;
-        height: 20px;
-        width: 20px;
     }
 
     :host([size="medium"]) .base.icon-only {
