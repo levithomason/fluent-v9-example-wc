@@ -10,6 +10,7 @@ export * from "./card-footer/index";
 export * from "./card-header/index";
 export * from "./card-preview/index";
 export * from "./checkbox/index";
+export * from "./counter-badge/index";
 export * from "./divider/index";
 export * from "./image/index";
 export * from "./link/index";

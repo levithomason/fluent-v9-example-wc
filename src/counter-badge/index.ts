@@ -1,6 +1,5 @@
-import { customElement } from '@microsoft/fast-element';
-import { Badge } from "./counter-badge";
-import { badgeTemplate as template } from "../badge/badge.template";
+import { customElement, html } from '@microsoft/fast-element';
+import { CounterBadge } from "./counter-badge";
 import { counterBadgeStyles as styles } from "./counter-badge.styles";
 
 /**
@@ -13,7 +12,11 @@ import { counterBadgeStyles as styles } from "./counter-badge.styles";
  */
 @customElement({
     name: "fluent-counter-badge",
-    template,
+    template: html<CounterBadge>`
+        <template :hidden=${x => x.hidden ?? (!x.showzero && x.count === 0 && !x.dot)}>
+            <slot><span>${x => x.setCount()}</span></slot>
+        </template>
+    `,
     styles,
 })
- export class FluentBadge extends Badge {}
+ export class FluentCounterBadge extends CounterBadge {}

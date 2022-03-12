@@ -1,29 +1,29 @@
-import { attr, FASTElement } from "@microsoft/fast-element";
+import { attr, FASTElement, nullableNumberConverter } from "@microsoft/fast-element";
 
   /**
-   * A Badge can be filled, outline, ghost, inverted
+   * A Counter Badge can be filled, outline, ghost, inverted
    */
-   export type BadgeAppearance = "filled" | "ghost" | "outline" | "tint";
+   export type CounterBadgeAppearance = "filled" | "ghost";
 
    /**
-    * A Badge can be one of preset colors
+    * A Counter Badge can be one of preset colors
     */
-   export type BadgeColor = "brand" | "danger" | "important" | "informative" | "severe" | "subtle" | "success" | "warning";
+   export type CounterBadgeColor = "brand" | "danger" | "important" | "informative";
  
    /**
-    * A Badge can be square, circular or rounded.
+    * A Counter Badge can be square, circular or rounded.
     */
-   export type BadgeShape = "circular" | "rounded" | "square";
+   export type CounterBadgeShape = "circular" | "rounded";
  
    /**
     * A Badge can be on of several preset sizes.
     */
-   export type BadgeSize = "tiny" | "extra-small" | "small" | "medium" | "large" | "extra-large";
+   export type CounterBadgeSize = "tiny" | "extra-small" | "small" | "medium" | "large" | "extra-large";
 
 /**
  * @internal
  */
-export class Badge extends FASTElement {
+export class CounterBadge extends FASTElement {
     /**
      * The appearance the badge should have.
      *
@@ -32,7 +32,7 @@ export class Badge extends FASTElement {
      * HTML Attribute: appearance
      */
     @attr
-    public appearance: BadgeAppearance = "filled";
+    public appearance: CounterBadgeAppearance = "filled";
     
     /**
      * The color the badge should have.
@@ -42,7 +42,7 @@ export class Badge extends FASTElement {
      * HTML Attribute: color
      */
     @attr
-    public color: BadgeColor = "brand";
+    public color: CounterBadgeColor = "brand";
     /**
      * The shape the badge should have.
      *
@@ -51,7 +51,7 @@ export class Badge extends FASTElement {
      * HTML Attribute: shape
      */
     @attr
-    public shape: BadgeShape = "circular";
+    public shape: CounterBadgeShape = "circular";
 
     /**
      * The size the badge should have.
@@ -61,32 +61,51 @@ export class Badge extends FASTElement {
      * HTML Attribute: size
      */
     @attr
-    public size: BadgeSize = "medium";
+    public size: CounterBadgeSize = "medium";
 
     /**
-     *
-     * Default slotted content
+     * Max number to be displayed
      *
      * @public
      * @remarks
+     * HTML Attribute: overflow-count
      */
-    public defaultSlottedContent: HTMLElement[];
+    @attr({ attribute: "overflow-count", converter: nullableNumberConverter })
+    public overflowCount: number = 99;
 
     /**
-     * Applies 'icon-only' class when there is only an SVG in the default slot
+    * Value displayed by the Badge
      *
      * @public
      * @remarks
+     * HTML Attribute: size
      */
-    public defaultSlottedContentChanged(): void {
-      const slottedElements = this.defaultSlottedContent.filter(
-          x => x.nodeType === Node.ELEMENT_NODE
-      );
+    @attr({ converter: nullableNumberConverter })
+    public count: number = 0;
 
-      if (slottedElements.length === 1 && slottedElements[0] instanceof SVGElement) {
-          this.classList.add("icon-only");
-      } else {
-          this.classList.remove("icon-only");
-      }
+    /**
+     * If the badge should be shown when count is 0
+     *
+     * @public
+     * @remarks
+     * HTML Attribute: showzero
+     */
+    public showzero: boolean = false;
+
+    /**
+    * If a dot should be displayed without the count
+     *
+     * @public
+     * @remarks
+     * HTML Attribute: dot
+     */
+    dot: boolean = false;
+
+    /**
+     * Function to set the count when no child nodes are present
+     */
+    public setCount() {
+        return this.count > this.overflowCount ? `${this.overflowCount}+` : `${this.count}`;
     }
+ 
 }
