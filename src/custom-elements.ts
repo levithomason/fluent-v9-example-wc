@@ -7,6 +7,7 @@ import { FluentCardFooter } from "./card-footer/index";
 import { FluentCardHeader } from "./card-header/index";
 import { FluentCardPreview } from "./card-preview/index";
 import { FluentCheckbox } from "./checkbox/index";
+import { FluentCounterBadge } from "./counter-badge/index";
 import { FluentDivider } from "./divider/index";
 import { FluentImage } from "./image/index";
 import { FluentLink } from "./link/index";
@@ -24,6 +25,7 @@ export const AllComponents = {
     FluentCardHeader,
     FluentCardPreview,
     FluentCheckbox,
+    FluentCounterBadge,
     FluentDivider,
     FluentImage,
     FluentLink,
