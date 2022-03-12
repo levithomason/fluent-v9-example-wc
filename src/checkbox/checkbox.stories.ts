@@ -15,7 +15,7 @@ addons.getChannel().addListener(STORY_RENDERED, (name: string) => {
     }
 });
 export default {
-    title: "Checkbox",
+    title: "Components/Checkbox",
 };
 
 export const Checkbox = () => CheckboxTemplate;
