@@ -8,6 +8,7 @@ import { FluentCardHeader } from "./card-header/index";
 import { FluentCardPreview } from "./card-preview/index";
 import { FluentCheckbox } from "./checkbox/index";
 import { FluentDivider } from "./divider/index";
+import { FluentImage } from "./image/index";
 import { FluentLink } from "./link/index";
 import { FluentPresenceBadge } from "./presence-badge/index";
 import { FluentToggleButton } from "./toggle-button/index";
@@ -23,6 +24,7 @@ export const AllComponents = {
     FluentCardPreview,
     FluentCheckbox,
     FluentDivider,
+    FluentImage,
     FluentLink,
     FluentPresenceBadge,
     FluentToggleButton
