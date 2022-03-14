@@ -11,6 +11,7 @@ import { FluentCounterBadge } from "./counter-badge/index";
 import { FluentDivider } from "./divider/index";
 import { FluentImage } from "./image/index";
 import { FluentLink } from "./link/index";
+import { FluentMenuButton } from "./menu-button/index";
 import { FluentPresenceBadge } from "./presence-badge/index";
 import { FluentText } from "./text/index";
 import { FluentToggleButton } from "./toggle-button/index";
@@ -29,6 +30,7 @@ export const AllComponents = {
     FluentDivider,
     FluentImage,
     FluentLink,
+    FluentMenuButton,
     FluentPresenceBadge,
     FluentText,
     FluentToggleButton
