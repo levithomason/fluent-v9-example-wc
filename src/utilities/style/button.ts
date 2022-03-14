@@ -55,10 +55,12 @@ export const baseButtonStyles = css`
         cursor: not-allowed;
     }
 
-    ::slotted(svg) {
+    ::slotted(svg),
+    slot > svg {
         font-size: 20px;
         height: 20px;
         width: 20px;
+        fill: currentColor;
     }
 `;
 
@@ -239,6 +241,7 @@ export const largeButtonStyles = css`
         line-height: ${tokens.lineHeightBase300};
     }
 
+    :host([size="large"]) slot > svg,
     :host([size="large"]) ::slotted(svg) {
         font-size: 24px;
         height: 24px;
