@@ -2,7 +2,7 @@ import PresenceBadgeTemplate from "./fixtures/presence-badge.html";
 import "./index";
 
 export default {
-    title: "Presence Badge",
+    title: "Components/Presence Badge",
 };
 
-export const Badge = () => PresenceBadgeTemplate;
+export const PresenceBadge = () => PresenceBadgeTemplate;
